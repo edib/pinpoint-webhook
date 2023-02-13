@@ -8,6 +8,7 @@ function isValidJSON($str)
     return json_last_error() == JSON_ERROR_NONE;
 }
 
+# for troubleshooting
 function write_to_somewhere($decoded_object)
 {
     $myfile = fopen("json_content.json", "a") or die("Unable to open file!");
@@ -80,6 +81,7 @@ if (isset($_POST)) {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_string);
         curl_setopt($ch, CURLOPT_HEADER, true);
+        # for some cases
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER,
             array(

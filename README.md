@@ -2,6 +2,13 @@
 [Pinpoint APM](https://github.com/pinpoint-apm/pinpoint)
 
 # Usage
+This supports multiple teams_urls. It matches *userGroupId* coming from pinpoint alarm and keys that are in config.ini file.    How to get teams_urls explained [here](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet). 
+
+example config.ini content 
+
+```ini
+my_team = "url_taken_teams"
+```
 
 ```
 # build
